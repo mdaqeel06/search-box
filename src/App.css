@@ -1,0 +1,91 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px;
+  background: #f5f7f8;
+  border-radius: 12px;
+}
+
+.filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.input-text {
+  margin-left: 4px;
+  padding: 4px;
+  font-family: inherit;
+  border: 1px solid black;
+}
+
+.input-text:focus {
+  outline: none;
+}
+
+.filter:hover .remove-button {
+  opacity: 1;
+}
+
+.remove-button {
+  position: absolute;
+  top: 0;
+  right: -16px;
+  margin-block: 3px;
+  height: calc(100%-6px);
+  padding-block: 6px;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  outline: none;
+}
+
+.global-filter-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 8px 4px;
+  font-family: inherit;
+}
+
+.global-filter-input:hover,
+.global-filter-input:focus {
+  border: none;
+  outline: none;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border-radius: 0 0 18px 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.dropdown-option {
+  list-style-type: none;
+  padding: 6px 12px;
+}
+
+.dropdown:not(:hover) .selected {
+  background: var(--hover-color);
+}
+
+.dropdown-option:hover {
+  background: var(--hover-color);
+  cursor: pointer;
+}
+
+.filter-desc {
+  font-style: italic;
+  color: #333;
+}
